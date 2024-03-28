@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    width:100%;
+    position: sticky !important;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 5px 8px rgba(6, 0, 6, 0);
+    z-index:10;
+}
+.navbar-brand{
+    font-weight: 600;
+}
+.nav-link{
+    color: white !important;
+    border-bottom: 1px solid white;
+}
+.nav-link:hover{
+    border-bottom: 1px solid white;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+#home{
+    width:100;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+#home p{
+    position: absolute;
+    top:50%;
+    font-size: 100px;
+    opacity: 0;
+    animation: text 3s ease-in-out;
+}
+#home p:nth-child(1){
+    animation-delay: 0s;
+}
+#home p:nth-child(2){
+    animation-delay: 3s;
+}
+
+#home p:nth-child(3){
+    animation-delay: 6s;
+
+}
+#home p:nth-child(4){
+    animation-delay: 9s;
+}
+
+@keyframes text{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media only screen and (max-width:600px) {
+    #home p{
+        font-size: 80px;
+    }
+    
+}
+#home span{
+    color: rgb(118, 80, 183);
+}
+
+
+
+#about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(183,45,214);
+}
+.circle{
+    width:400px;
+    height: 400px;
+    background:#c7bfaf ;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.6);
+    transition: 1s;
+}
+.circle img{
+    position: absolute;
+    height:200px;
+    top: 20%;
+    left: 25%;
+    filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.4));
+    transition: 1s;
+    
+}
+.circle:hover{
+    width: 700px;
+    height: 400px;
+    transition: 1s;
+    border-radius: 20px;
+    transition: 1s;
+}
+.circle:hover img{
+    position: absolute;
+    left: 5%;
+    transition: 1s;
+}
+.circle:hover .content{
+    position: absolute;
+    top:10%;
+    right: 0;
+    color:  rgb(7, 1, 41);
+    width: 60%;
+    opacity: 1;
+    transition: 1s;
+    padding:10px;
+}
+.circle .content{
+    opacity: 0;
+}
+@media only screen and (max-width:600px){
+    .circle:hover img{
+        position: absolute;
+        top:10%;
+        left: 25%;
+        transition: 1s;
+    }
+    .circle:hover{
+        width: 400px;
+        height: 600px;
+        transition: 1s;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    .circle:hover .content{
+        position: absolute;
+        top:45%;
+        right: 0;
+        color: black;
+        width: 100%;
+        opacity: 1;
+        transition: 1s;
+        padding:10px;
+    }
+    .circle .content{
+        opacity: 0;
+    }
+}
+
+
+#skills{
+    color: black;
+    padding-top: 10%;
+    background:  rgb(183,45,214);
+}
+#skills .container{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+label{
+    font-size: 20px;
+}
+.progress{
+    height: 20px !important;
+    box-shadow: 2px 4px 5px  rgb(183, 45, 214);
+}
+
+#projects{
+    color:black;
+    background-color:  rgba(205, 113, 203, 0.342);
+
+}
+
+
+#contact{
+    color:black;
+    padding-top:7%;
+    background-color: rgb(183, 45, 214);
+}
+#contact iframe{
+    box-shadow: 10px 10px 10px  rgb(146, 145, 242);
+
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    #contact {
+        padding-top: 15%; /* Adjust padding for smaller screens */
+    }
+
+    #contact iframe {
+        width: 100%; /* Make the Google Maps iframe responsive */
+        height: 300px; /* Adjust the height as needed */
+        box-shadow: 10px 10px 10px  rgb(203, 87, 52);
+    }
+
+    .col-lg-5 {
+        margin-top: 10px; /* Adjust margin for the form on smaller screens */
+    }
+}
